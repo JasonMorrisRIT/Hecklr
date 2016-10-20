@@ -90,6 +90,7 @@ Paste Youtube URL -&gt; <input id="searchterm" type="text" size="20" autofocus v
     
     
     <script>
+    "use strict";
 
     
       //make an array to hold are video links
@@ -135,7 +136,7 @@ Paste Youtube URL -&gt; <input id="searchterm" type="text" size="20" autofocus v
     chatDiv = document.querySelector("#chat");
     chatDiv.innerHTML = chatDiv.innerHTML + "<hr><p>" + message + "</p>";
     chatDiv.scrollTop = chatDiv.scrollHeight;
-  };
+  }
   
   //parses a pasted Youtube url to get the videoId to send to the videos[] for the player later.
   function getData() {
@@ -230,7 +231,7 @@ Paste Youtube URL -&gt; <input id="searchterm" type="text" size="20" autofocus v
         var videoLength = player.getDuration();
         var current = player.getCurrentTime();
         console.log("Percent played: " + current/videoLength * 100);
-      };
+      }
 
       
      
